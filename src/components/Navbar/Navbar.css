@@ -1,11 +1,11 @@
-.navbar{
+.navbar {
   min-height: 5rem;
-  background: rgb(42,102,154);
+  background: rgb(42, 102, 154);
   display: flex;
-  justify-content: left
+  justify-content: left;
 }
 
-.company{
+.company {
   margin: 0;
   font-size: 2rem;
   font-weight: 500;
@@ -13,7 +13,7 @@
   color: white;
 }
 
-.logo{
+.logo {
   margin: 20px 5px auto 2%;
   width: 40px;
   height: 40px;
