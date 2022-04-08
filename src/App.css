@@ -2,9 +2,14 @@
   text-align: center;
 }
 
-
 .header {
   font-size: 4rem;
   font-weight: 300;
-  margin: 2% 25%
+  margin: 2% 25%;
+}
+
+.subheader {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 2% 25%;
 }

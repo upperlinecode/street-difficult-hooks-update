@@ -1,14 +1,16 @@
-import React from 'react';
-import './DataView.css';
+import React from "react";
+import "./DataView.css";
 
-function DataView(props) {
-  return(
+const DataView = (props) => {
+  return (
     <div className="view">
-      <div className="view-column">
+      {/* left side */}
+      <div className="view-column mobile-hide">
         <div className="borough">
           <h1 className="borough-text">{props.borough}</h1>
         </div>
       </div>
+      {/* right side */}
       <div className="view-column">
         <div className="data-view">
           <div className="data-view-column left right">
@@ -33,6 +35,6 @@ function DataView(props) {
       </div>
     </div>
   );
-}
+};
 
 export default DataView;
