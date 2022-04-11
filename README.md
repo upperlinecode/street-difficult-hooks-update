@@ -21,13 +21,13 @@ Before jumping into this activity, check out the blog post we will be refactorin
 
 ## The Lab
 
-1. We are going to be begin by making the Staten Island graphic from the StreetEasy blog post. In the `App.jsx` component, find the `<DataView/>` component below the `<h3>` element. Add the following attributes to the `<DataView/>` component. This will pass down the provided information as props to the component.
+1. We are going to be begin by making the Staten Island graphic from the StreetEasy blog post. In the `App.jsx` component, find the `<DataView/>` component below the `<h2>` element. Add the following attributes to the `<DataView/>` component. This will pass down the provided information as props to the component.
 
 ```javascript
 <DataView borough="Staten Island" renterCost="$14,292" ownerCost="$29,752" />
 ```
 
-2. You'll notice the ownerCost prop isn't being displayed! Update the `DataView.js` file to render the ownerCost prop.
+2. You'll notice the ownerCost prop isn't being displayed! Update the `DataView.jsx` file to render the ownerCost prop.
 
 3. Add an additional `<DataView/>` component to the `App.jsx` for each of the boroughs (Queens, Brooklyn, Manhattan, Bronx). Fill in the props with the data provided in the StreetEasy blog post linked above.
 
