@@ -24,6 +24,12 @@ Before jumping into this activity, check out the blog post we will be refactorin
 1. We are going to be begin by making the Staten Island graphic from the StreetEasy blog post. In the `App.jsx` component, find the `<DataView/>` component below the `<h2>` element. Add the following attributes to the `<DataView/>` component. This will pass down the provided information as props to the component.
 
 ```javascript
+<DataView borough="Staten Island" renterCost={14292} ownerCost={29752} />
+// Notice that JSX will read all props as strings. Use braces when you want to pass in any other data type.
+```
+
+```javascript
+// Note: If you wanted to pass the cost props down as formatted strings instead of as numbers, you could preserve the dollar sign and comma, as shown here:
 <DataView borough="Staten Island" renterCost="$14,292" ownerCost="$29,752" />
 ```
 
@@ -36,17 +42,20 @@ Before jumping into this activity, check out the blog post we will be refactorin
 ```javascript
 <DataView
   borough="Staten Island"
-  renterCost="$14,292"
-  ownerCost="$29,752"
-  renterIncome="$37,882"
-  ownerIncome="$94,177"
+  renterCost={14292}
+  ownerCost={29752}
+  renterIncome={37882}
+  ownerIncome={94177}
 />
 ```
 
 5. Add the `renterIncome` prop and `ownerIncome` prop to the `<DataView/>` components for the remaining four boroughs with the appropriate data.
 
-6. Add another row to the `<DataView/>` component to display the "Cost-To-Income ratio" for each borough. You won't need to pass a new prop - this can be dynamically computed inside the `{}` that we use to display data. 
-    * While it's not necessary, you may decide that you want to change the format you're using to pass in the props - the example code shows how to pass in strings (e.g. `renterCost="$14,292"`), but you could also decide to pass in a number instead (e.g. `renterCost={14292}`) and handle the [currency formatting](https://stackabuse.com/how-to-format-number-as-currency-string-in-javascript/) within the component.  
+6. Add another row to the `<DataView/>` component to display the "Cost-To-Income ratio" for each borough. You won't need to pass a new prop - this can be dynamically computed inside the `{}` that we use to display data.
+
+   - While it's not necessary, you may decide that you want to change the format you're using to pass in the props - you may have sent over strings (e.g. `renterCost="$14,292"`), but you could also decide to pass in a number instead (e.g. `renterCost={14292}`) and handle the [currency formatting](https://stackabuse.com/how-to-format-number-as-currency-string-in-javascript/) within the component itself.
+   - If you're sending the data as strings, write some code to extract the numerical value so that you can compute these ratios inside the component.
+   - If you're sending the data as numbers, write some code to format that data with appropriate commas.
 
 7. You'll notice that in the original blog post, there is a message at the bottom of each graphic. For example, in the Staten Island graphic it says "Cost of living vastly differs for renters and buyers." Add this piece of styling and text to the `DataView` component.
 
