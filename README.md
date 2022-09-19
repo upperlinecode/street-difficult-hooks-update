@@ -24,13 +24,13 @@ Before jumping into this activity, check out the blog post we will be refactorin
 1. We are going to be begin by making the Staten Island graphic from the StreetEasy blog post. In the `App.jsx` component, find the `<DataView/>` component below the `<h2>` element. Add the following attributes to the `<DataView/>` component. This will pass down the provided information as props to the component.
 
 ```javascript
-<DataView borough="Staten Island" renterCost={14292} ownerCost={29752} />
+<DataView borough="Staten Island" renterCost={14292} ownerCost={28752} />
 // Notice that JSX will read all props as strings. Use braces when you want to pass in any other data type.
 ```
 
 ```javascript
 // Note: If you wanted to pass the cost props down as formatted strings instead of as numbers, you could preserve the dollar sign and comma, as shown here:
-<DataView borough="Staten Island" renterCost="$14,292" ownerCost="$29,752" />
+<DataView borough="Staten Island" renterCost="$14,292" ownerCost="$28,752" />
 ```
 
 2. You'll notice the ownerCost prop isn't being displayed! Update the `DataView.jsx` file to render the ownerCost prop.
@@ -43,7 +43,7 @@ Before jumping into this activity, check out the blog post we will be refactorin
 <DataView
   borough="Staten Island"
   renterCost={14292}
-  ownerCost={29752}
+  ownerCost={28752}
   renterIncome={37882}
   ownerIncome={94177}
 />
